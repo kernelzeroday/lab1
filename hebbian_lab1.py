@@ -30,6 +30,8 @@ def forward_with_activations(model, x):
             activations[name] = x
     return x, activations
 
+
+#By only applying the Hebbian update to the first linear layer fc1, we take advantage of both Hebbian learning and backpropagation. This combination may increase the performance of the model.
 def hebbian_update(model, labels, activations, learning_rate, clip_range=(-1, 1)):
     for name, layer in model.named_children():
         if isinstance(layer, nn.Linear):
