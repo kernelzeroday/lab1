@@ -41,7 +41,9 @@ def hebbian_update(model, labels, activations, learning_rate, clip_range=(-1, 1)
             if name == 'fc2':
                 labels = labels.float()
                 predicted = torch.argmax(post_activation, dim=1)
-                reward = -torch.abs(predicted - labels).unsqueeze(1)
+                max_diff = activations['fc2'].size(1) - 1
+                reward = (max_diff - torch.abs(predicted - labels)) / max_diff  # Use a non-negative reward
+                reward = reward.unsqueeze(1)
             else:
                 reward = activations['fc2_pre']
             outer_product = torch.bmm(pre_activation.unsqueeze(2), post_activation.unsqueeze(1))
