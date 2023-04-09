@@ -77,4 +77,78 @@ Accuracy of the network on the 10000 test images: 96 %
 real	0m16.024s
 user	0m16.883s
 sys	0m4.450s
+
+
+
+
+
+(ins)(mit-lab1) kod@m2-air:~/ai/mit/lab1$ time python3 hebbian_lab1.py  ; time python3 lab1.torch.py
+Epoch 1, Loss: 0.33804693874716757
+Epoch 2, Loss: 0.1720916073533396
+Finished Training
+Accuracy of the network on the 10000 test images: 95 %
+
+real	0m6.576s
+user	0m6.994s
+sys	0m1.729s
+Epoch 1, Loss: 0.3367856568694115
+Epoch 2, Loss: 0.16612099194452168
+Finished Training
+Accuracy of the network on the 10000 test images: 96 %
+
+real	0m5.934s
+user	0m6.750s
+sys	0m2.328s
+(ins)(mit-lab1) kod@m2-air:~/ai/mit/lab1$ time python3 hebbian_lab1.py  ; time python3 lab1.torch.py
+Epoch 1, Loss: 0.3524486685862144
+Epoch 2, Loss: 0.1779389035768807
+Epoch 3, Loss: 0.13448814043924212
+Finished Training
+Accuracy of the network on the 10000 test images: 95 %
+
+real	0m8.791s
+user	0m9.767s
+sys	0m2.394s
+Epoch 1, Loss: 0.34005382469395795
+Epoch 2, Loss: 0.16864159806072712
+Epoch 3, Loss: 0.12702587253836295
+Finished Training
+Accuracy of the network on the 10000 test images: 95 %
+
+real	0m8.359s
+user	0m9.435s
+sys	0m2.610s
+(ins)(mit-lab1) kod@m2-air:~/ai/mit/lab1$ time python3 hebbian_lab1.py  ; time python3 lab1.torch.py
+Epoch 1, Loss: 0.340653595233957
+Epoch 2, Loss: 0.17271762538452942
+Epoch 3, Loss: 0.13194112667019167
+Epoch 4, Loss: 0.10837624184824526
+Epoch 5, Loss: 0.09330207800986245
+Epoch 6, Loss: 0.08154976849475255
+Epoch 7, Loss: 0.07395304198814556
+Epoch 8, Loss: 0.06639145725364796
+Epoch 9, Loss: 0.06363096585799163
+Epoch 10, Loss: 0.057993992499355225
+Finished Training
+Accuracy of the network on the 10000 test images: 97 %
+
+real	0m26.022s
+user	0m26.331s
+sys	0m7.327s
+Epoch 1, Loss: 0.3442563301811616
+Epoch 2, Loss: 0.17453053133140006
+Epoch 3, Loss: 0.1314509329835574
+Epoch 4, Loss: 0.11036084519699216
+Epoch 5, Loss: 0.09597646965291351
+Epoch 6, Loss: 0.08543436160115525
+Epoch 7, Loss: 0.07628132206893837
+Epoch 8, Loss: 0.07084587229220196
+Epoch 9, Loss: 0.06578082495755516
+Epoch 10, Loss: 0.061664864114221805
+Finished Training
+Accuracy of the network on the 10000 test images: 96 %
+
+real	0m26.345s
+user	0m26.898s
+sys	0m7.223s
 ```
