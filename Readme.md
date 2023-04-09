@@ -1,3 +1,4 @@
+```
 (ins)(mit-lab1) kod@m2-air:~/ai/mit/lab1$ time python3 hebbian_lab1.py  ; time python3 lab1.torch.py
 Epoch 1, Loss: 0.33921222377717497
 Epoch 2, Loss: 0.1695918079212308
@@ -21,3 +22,4 @@ Accuracy of the network on the 10000 test images: 96 %
 real	0m13.718s
 user	0m14.289s
 sys	0m4.412s
+```
