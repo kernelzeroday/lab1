@@ -30,6 +30,7 @@ def forward_with_activations(model, x):
             activations[name] = x
     return x, activations
 
+#full hebbian update
 def hebbian_update(model, labels, activations, learning_rate, clip_range=(-1, 1)):
     for name, layer in model.named_children():
         if isinstance(layer, nn.Linear):
@@ -70,7 +71,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Train the model
 num_epochs = 5
-hebbian_learning_rate = 0.0005
+hebbian_learning_rate = 0.00001
 
 for epoch in range(num_epochs):
     running_loss = 0.0
