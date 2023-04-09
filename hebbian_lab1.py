@@ -72,7 +72,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 hebbian_learning_rate = 0.0005
 
 # Train the model
-num_epochs = 5
+num_epochs = 6
 for epoch in range(num_epochs):
     running_loss = 0.0
     for i, data in enumerate(trainloader, 0):
