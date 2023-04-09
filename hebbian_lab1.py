@@ -68,9 +68,11 @@ model = SimpleNN().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
+#learning rate
+hebbian_learning_rate = 0.0005
+
 # Train the model
 num_epochs = 10
-hebbian_learning_rate = 0.0005
 for epoch in range(num_epochs):
     running_loss = 0.0
     for i, data in enumerate(trainloader, 0):
@@ -87,13 +89,14 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-        # Hebbian update
-        hebbian_update(model, labels, activations, hebbian_learning_rate)
+        # Partial Hebbian update for fc1 only
+        if model.fc1 in activations:
+            hebbian_update(model.fc1, labels, activations, hebbian_learning_rate)
 
         running_loss += loss.item()
 
     print(f"Epoch {epoch+1}, Loss: {running_loss / len(trainloader)}")
-
+    
 print("Finished Training")
 
 # Evaluate the model
